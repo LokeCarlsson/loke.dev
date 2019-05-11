@@ -4,7 +4,7 @@
   <img alt="version badge" src="https://img.shields.io/badge/version-3.0.0-blue.svg?style=flat-square" />
   <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
 </p>
-<p align="center"><a href="https://lokecarlsson.se"><img alt="logo" src="https://user-images.githubusercontent.com/14079937/51091134-77887980-1786-11e9-9b49-173fca1762d2.png" /></a></p>
+<p align="center"><a href="https://loke.dev"><img alt="logo" src="https://user-images.githubusercontent.com/14079937/51091134-77887980-1786-11e9-9b49-173fca1762d2.png" /></a></p>
 <p align="center">Portfolio / Blog</p>
 <p align="center"><a href="https://vuejs.org" target="_blank"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
 
@@ -17,8 +17,8 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ``` bash
-Node
-Yarn
+- Node
+- Yarn
 ```
 
 ### Installing
@@ -36,11 +36,21 @@ yarn dev
 ``` bash
 # Build for production
 yarn build
+# Serve /dist
 ```
 
 ## Publishing
 
-Is done automatically with Netlify.
+Using Netlify to automatically build and deploy from the Github repo.
+
+## Forestry
+
+Get started right away by importing this project and setup your own installment of the cms and importing all data.
+
+<p>
+  <a href="https://app.forestry.io/quick-start?repo=LokeCarlsson/loke.dev&amp;provider=github&amp;engine=vuepress" rel="nofollow"><img src="https://camo.githubusercontent.com/2455e97e4e989374a355fb0bea7ad364f2561c92/68747470733a2f2f6173736574732e666f7265737472792e696f2f696d706f72742d746f2d666f7265737472794b2e737667" alt="Import this project into Forestry" data-canonical-src="https://assets.forestry.io/import-to-forestryK.svg" style="max-width:100%;"></a>
+</p>
+
 
 ## Running the tests
 

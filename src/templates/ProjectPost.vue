@@ -1,36 +1,41 @@
 <template>
   <Layout>
     <div class="project">
-
       <div class="container">
-
         <div class="project-header">
-          <h1 class="project-title" v-html="$page.post.title" />
+          <h1 class="project-title" v-html="$page.post.title"/>
           <div class="project-info">
-
             <div class="categories-container">
               <div class="categories">
                 <span class="label">Categories</span>
-                <span 
+                <span
                   class="category"
-                  v-for="(category, index) in $page.post.categories" 
+                  v-for="(category, index) in $page.post.categories"
                   :key="index"
                   v-text="category"
                 />
               </div>
             </div>
 
-            <div class="year-container">
-              <span class="label">Year</span>
-              <div v-html="$page.post.date"/>
+            <div class="github-container">
+              <span class="label">Github</span>
+              <a :href="$page.post.github" target="_blank" rel="noopener">
+                {{$page.post.github}}
+              </a>
+            </div>
+            <div class="demo-container">
+              <span v-if="$page.post.demo" class="label">Demo</span>
+              <a :href="$page.post.demo" target="_blank" rel="noopener">
+                {{$page.post.demo}}
+              </a>
             </div>
           </div>
         </div>
-
-        <div v-html="$page.post.content" class="content" />
-
+        <div class="content">
+          <g-image :src="$page.post.thumbnail" :alt="$page.post.thumbnail" class="thumbnail" />
+          <div v-html="$page.post.content" class=""/>
+        </div>
       </div>
-
     </div>
   </Layout>
 </template>
@@ -39,55 +44,71 @@
 query ProjectPost ($path: String!) {
   post: projectPost (path: $path) {
     title
-    date (format: "YYYY")
+    github
+    demo
     content
     categories
     projectBgColor
     projectFgColor
+    thumbnail (quality: 100)
   }
 }
 </page-query>
 
 <script>
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
       title: this.$page.post.title,
       bodyAttrs: {
-        style: `background-color: ${this.$page.post.projectBgColor ? this.$page.post.projectBgColor : 'var(--color-base)'}; color: ${this.$page.post.projectFgColor ? this.$page.post.projectFgColor : 'var(--color-contrast)'}`
-      }
+        style: `background-color: ${
+          this.$page.post.projectBgColor ? this.$page.post.projectBgColor : 'var(--color-base)'
+        }; color: ${this.$page.post.projectFgColor ? this.$page.post.projectFgColor : 'var(--color-contrast)'}`,
+      },
     }
-  }
+  },
 }
 </script>
 
-<style scoped>
-.project {
-  padding-bottom: 50px;
-}
-.project-header {
-  padding: 5vh 0 4rem 0;
-}
-.project-title {
-  font-size: 4rem;
-  margin: 0 0 4rem 0;
-  padding: 0;
-}
-.project-info {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.8rem;
-}
-.project-info > div {
-  margin-right: 4rem;
-}
-.project-info > div:last-of-type {
-  margin: 0;
-}
-.category:after {
+<style lang="sass" scoped>
+.project-header 
+  padding: 5vh 0 4rem 0
+
+.project-title 
+  font-size: 3rem
+  font-weight: 400
+  margin: 0 0 4rem 0
+  padding: 0
+
+.project-info 
+  display: flex
+  flex-wrap: wrap
+  font-size: 0.8rem
+
+.project-info > div 
+  margin-right: 4rem
+
+.project-info > div:last-of-type 
+  margin: 0
+
+.category:after 
   content: ', '
-}
-.category:last-of-type:after {
-  content: '';
-}
+
+.category:last-of-type:after 
+  content: ''
+
+.content
+  max-width: 780px
+  margin: auto
+  display: flex;
+  flex-flow: column;
+
+  img
+    max-height: 500px
+    align-self: center
+    margin-bottom: 2rem
+
+.link-container
+  display: flex
+
 </style>

@@ -1,7 +1,6 @@
 import * as images from '../../assets/img/skills';
 
-export default [
-  {
+export default [{
     name: 'HTML5',
     image: images.HTML5,
     url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',

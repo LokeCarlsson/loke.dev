@@ -1,16 +1,12 @@
-// This is where project configuration and installed plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
 module.exports = {
   siteName: 'Loke Carlsson',
-  siteUrl: 'https://www.lokecarlsson.se',
+  siteUrl: 'https://loke.dev',
   titleTemplate: '%s - Portfolio & Blog',
-  siteDescription: 'Web developer',
-  plugins: [
-    {
+  siteDescription: 'As a frontend developer, I focus on solving problems and creating beautiful user interfaces. You can read about stuff I\'m passionate of in my blog.',
+  plugins: [{
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-72659574-1',
+        id: process.env.ANALYTICS_ID,
       }
     },
     {
@@ -37,10 +33,38 @@ module.exports = {
         },
       },
     },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        config: {
+          '/journal/*': {
+            changefreq: 'daily',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'weekly',
+            priority: 0.7
+          },
+          '/projects': {
+            changefreq: 'weekly',
+            priority: 0.9
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1920,
+        height: 1080
+      }
+    },
   ],
   transformers: {
     remark: {
       plugins: ['@gridsome/remark-prismjs'],
     },
   },
-};
+}

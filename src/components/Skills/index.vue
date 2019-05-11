@@ -1,56 +1,80 @@
 <template>
-  <section id="skills" class="section">
-    <div class="block has-text-centered">
-      <h2 class="title is-2">Skills</h2>
-      <h5 class="subtitle is-5">Technologies I work in most frequently.</h5>
+  <section id="skills-wrapper" class="section">
+    <div class="title-section">
+      <h2 class="title">Skills</h2>
+      <h5 class="subtitle">Technologies I work in most frequently.</h5>
     </div>
-    <div class="skills columns is-multiline is-mobile">
-      <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop"
-        v-for="(skill, index) in skills"
-        :key="index">
-        <div class="skill">
-          <a class="image"
-            target="_blank"
-            rel="noopener"
-            :href="skill.url"
-            :title="skill.name">
-              <img :src="skill.image" :alt="skill.name">
-              <div class="preloader" slot="placeholder" />
-          </a>
-        </div>
+    <div class="skills">
+      <div class="skill" v-for="(skill, index) in skills" :key="index">
+        <a class="image" target="_blank" rel="noopener" :href="skill.url" :title="skill.name">
+          <img :src="skill.image" :alt="skill.name">
+          <div class="preloader" slot="placeholder"/>
+        </a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-
-import skills from './skills';
+import skills from './skills'
 
 export default {
   name: 'skills',
   data() {
     return {
       skills,
-    };
+    }
   },
-  components: {
-  },
-};
+  components: {},
+}
 </script>
 
 <style lang="sass" scoped>
-  .columns
-    justify-content: center
+.section
+  padding-top: 75px
+  padding-bottom: 75px
 
-  .skill img
-    padding: 0.5em
-    margin: 0 auto
-    max-width: 110px
-    opacity: 0.6
-    transition: all 0.15s ease-in
-    &:hover
-      opacity: 1
-      transform: scale(1.1)
-      cursor: pointer
+.title-section
+  padding-bottom: 50px
+  text-align: center
+
+.title
+  color: #363636
+  font-size: 2.5rem
+  font-weight: 600
+  line-height: 1.125
+  margin: 0
+
+.subtitle
+  color: #4a4a4a
+  font-size: 1.25rem
+  font-weight: 400
+  line-height: 1.25
+  word-break: break-word
+  margin: 0
+
+.skills
+  display: flex
+  flex-wrap: wrap
+
+.skill
+  flex: none
+  width: 25%
+  padding: 20px
+  @media screen and (max-width: 720px)
+    flex: none
+    width: 33.3333%
+  @media screen and (max-width: 430px)
+    flex: none
+    width: 50%
+
+.skill img
+  display: flex
+  padding: 0.5em
+  margin: 0 auto
+  max-width: 110px
+  transition: all 0.15s ease-in
+  &:hover
+    transform: scale(1.1)
+    cursor: pointer
 </style>

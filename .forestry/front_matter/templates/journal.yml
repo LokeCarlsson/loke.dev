@@ -1,7 +1,6 @@
 ---
 label: Journal
 hide_body: false
-is_partial: false
 fields:
 - type: text
   name: title
@@ -32,6 +31,7 @@ fields:
   label: Author
   default: ''
 pages:
-- journal/macos-development-environment.md
-- journal/test-loke.md
-- journal/lorem-ipsum.md
+- journal/it-is-time-to-move-to-the-jamstack.md
+- journal/what-is-gridsome.md
+- journal/slothmode.md
+- journal/finding-the-perfect-newtab-extension.md

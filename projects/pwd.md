@@ -10,9 +10,9 @@ categories:
 - CSS
 - HTML
 project_bg_color: ''
-project_fg_color: "#224D87"
+project_fg_color: "#000000"
+github: https://github.com/LokeCarlsson/pwd
+demo: ''
 
 ---
-![](/uploads/pwd.png)
-
-My PWD application
+PWD is a Personal Web Desktop which is built as a clone of macOS with HTML, CSS and vanilla Javascript using the constructor/prototype pattern.The chat application is connected to a server communicating with web sockets.

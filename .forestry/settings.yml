@@ -4,6 +4,9 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: document
+  path: data/about.md
+  label: About
 - type: directory
   path: projects
   label: Projects
@@ -26,8 +29,10 @@ public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
+instant_preview: true
 build:
   preview_command: gridsome build
   publish_command: gridsome build
   preview_output_directory: dist
   output_directory: dist
+  instant_preview_command: yarn dev --port 8080 --host 0.0.0.0

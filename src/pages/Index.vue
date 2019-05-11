@@ -1,11 +1,11 @@
 <template>
   <Layout>
+    <Hero/>
     <div class="container">
-      <Hero />
-      <ProjectsGrid :projects="$page.projects.edges" />
-      <skills />
+      <ProjectsGrid :projects="$page.projects.edges"/>
+      <skills/>
     </div>
-    <LatestJournals :journals="$page.journals.edges" />
+    <LatestJournals :journals="$page.journals.edges"/>
   </Layout>
 </template>
 
@@ -23,7 +23,7 @@ query Posts {
       }
     }
   },
-  journals: allJournalPost (perPage: 4) {
+  journals: allJournalPost (perPage: 3) {
     edges {
       node {
         id
@@ -36,17 +36,31 @@ query Posts {
 </page-query>
 
 <script>
-import Hero from "@/components/Hero"
-import Skills from "@/components/Skills"
-import ProjectsGrid from "@/components/ProjectsGrid"
-import LatestJournals from "@/components/LatestJournals"
+import Hero from '@/components/Hero'
+import Skills from '@/components/Skills'
+import ProjectsGrid from '@/components/ProjectsGrid'
+import LatestJournals from '@/components/LatestJournals'
 
 export default {
   components: {
     Skills,
     Hero,
     ProjectsGrid,
-    LatestJournals
-  }
+    LatestJournals,
+  },
+  methods: {
+    navHandler() {
+      const { innerHeight, scrollY } = window
+      const isPrimary = this.$store.getters.isPrimary
+      const newValue = scrollY + 30 < innerHeight
+
+      if (isPrimary !== newValue) {
+        this.$store.dispatch('primary', !isPrimary)
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.navHandler.bind(this))
+  },
 }
 </script>

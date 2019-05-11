@@ -6,13 +6,22 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
+    "@gridsome/plugin-critical": "^0.1.1",
     "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.1.1",
     "@gridsome/remark-prismjs": "0.0.4",
-    "@gridsome/source-filesystem": "^0.2.0",
-    "@gridsome/transformer-remark": "^0.1.3",
-    "gridsome": "^0.4.1",
+    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.2.1",
+    "gridsome": "^0.5.4",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-style-loader": "^4.1.2"
+    "v-tooltip": "^2.0.0-rc.33",
+    "vue-disqus": "^3.0.5",
+    "vue-style-loader": "^4.1.2",
+    "vuex": "^3.1.0"
   }
 }

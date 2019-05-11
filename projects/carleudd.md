@@ -7,10 +7,10 @@ categories:
 - css
 project_bg_color: ''
 project_fg_color: "#000000"
+github: https://github.com/LokeCarlsson/carleudd
+demo: https://carleudd.lokecarlsson.se
 
 ---
-![](/uploads/carleudd.png)
-
-With the aim of being quick and accessible only using best practices and having no frameworks at all, here is carleudd! 
+With the aim of being quick and accessible only using best practices and having no frameworks at all, here is carleudd!
 
 ![](https://user-images.githubusercontent.com/14079937/48583437-6f978f00-e927-11e8-8397-e172638f477f.png)

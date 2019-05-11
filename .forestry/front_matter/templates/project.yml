@@ -1,7 +1,6 @@
 ---
 label: Project
 hide_body: false
-is_partial: false
 fields:
 - type: file
   name: thumbnail
@@ -12,11 +11,16 @@ fields:
   label: Title
   config:
     required: true
-- type: datetime
-  name: date
-  label: Date
+- type: text
+  name: github
+  label: github
+  description: Github repo link
   config:
     required: true
+- type: text
+  name: demo
+  label: Demo
+  description: Demo url
 - type: tag_list
   name: categories
   label: Categories
@@ -34,3 +38,8 @@ pages:
 - projects/pwd.md
 - projects/carleudd.md
 - projects/gitgud.md
+- projects/tcg.md
+- projects/blog-api.md
+- projects/quizmaster.md
+- projects/lillafrö.md
+- projects/code-snippets.md
