@@ -12,7 +12,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "@gridsome/plugin-critical": "^0.1.1",
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/plugin-sitemap": "^0.2.1",
+    "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/remark-prismjs": "0.1.0",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.2",
