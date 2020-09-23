@@ -2,7 +2,7 @@
 title: It is time to move to the JAMstack
 excerpt: JAM stands for JavaScript, API, Markup and is the future way of creating
   websites.
-date: 2019-05-06 22:00:00 +0000
+date: 2019-05-06T22:00:00.000+00:00
 author: Loke Carlsson
 
 ---
@@ -88,3 +88,4 @@ Try out one of my starters for Gridsome:
 
 * [https://github.com/LokeCarlsson/gridsome-starter-docs](https://github.com/LokeCarlsson/gridsome-starter-docs)
 * [https://github.com/LokeCarlsson/gridsome-starter-bootstrap](https://github.com/LokeCarlsson/gridsome-starter-bootstrap)
+* [https://github.com/LokeCarlsson/gridsome-starter-resume](https://github.com/LokeCarlsson/gridsome-starter-resume "https://github.com/LokeCarlsson/gridsome-starter-resume")

@@ -5,12 +5,12 @@
   >
     <div class="container">
       <div class="nav left">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
+        <g-link class="nav__link" to="/">Home</g-link>
       </div>
       <nav class="nav right">
-        <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
-        <g-link class="nav__link" :to="{ name: 'journal' }">Journal</g-link>
-        <g-link class="nav__link" :to="{ name: 'contact' }">Contact</g-link>
+        <g-link class="nav__link" to="/about">About</g-link>
+        <g-link class="nav__link" to="/journal">Journal</g-link>
+        <g-link class="nav__link" to="/contact">Contact</g-link>
       </nav>
     </div>
   </header>
@@ -37,7 +37,7 @@ export default {
     a
       color: white!important
       opacity: 0.75
-    
+
 
 .header.sticky
   position: fixed

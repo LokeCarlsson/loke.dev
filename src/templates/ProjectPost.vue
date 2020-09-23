@@ -48,8 +48,6 @@ query ProjectPost ($path: String!) {
     demo
     content
     categories
-    projectBgColor
-    projectFgColor
     thumbnail (quality: 100)
   }
 }
@@ -71,30 +69,30 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.project-header 
+.project-header
   padding: 5vh 0 4rem 0
 
-.project-title 
+.project-title
   font-size: 3rem
   font-weight: 400
   margin: 0 0 4rem 0
   padding: 0
 
-.project-info 
+.project-info
   display: flex
   flex-wrap: wrap
   font-size: 0.8rem
 
-.project-info > div 
+.project-info > div
   margin-right: 4rem
 
-.project-info > div:last-of-type 
+.project-info > div:last-of-type
   margin: 0
 
-.category:after 
+.category:after
   content: ', '
 
-.category:last-of-type:after 
+.category:last-of-type:after
   content: ''
 
 .content
